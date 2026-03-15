@@ -1,7 +1,7 @@
-
-package main
+package hello
 
 import "testing"
+import "fmt"
 
 func TestHello(t *testing.T) {
 	t.Run("saying hello to people", func(t *testing.T) {
@@ -42,4 +42,8 @@ func assertCorrectMessage(t testing.TB, got, want string) {
 	}
 }
 
-
+func ExampleHello() {
+	greeting := Hello("Gabriel", "French")
+	fmt.Println(greeting)
+	// Output: Salut, Gabriel
+}
